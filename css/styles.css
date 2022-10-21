@@ -21,7 +21,6 @@
 }
 
 .body {
-  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: "Roboto";
   font-style: normal;
@@ -38,11 +37,16 @@
 .header {
   background-color: var(--primary-white-color);
 }
+
+.link.current {
+  color: var(--accent-color);
+}
+
 /* Logo */
 .header-logo {
   font-weight: 700;
   font-size: 26px;
-  line-height: calc(31 / 26);
+  line-height: 1.19;
   /* identical to box height */
   letter-spacing: 0.03em;
   color: var(--primary-black-color);
@@ -57,7 +61,7 @@
 .header-list-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
@@ -73,20 +77,36 @@
 .header-tel-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
 }
 
+.header-portfolio {
+  background-color: var(--primary-white-color);
+}
 /* Hero */
 .hero {
   background-color: var(--tertiary-bg-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .section-hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: calc(60 / 44);
+  line-height: 1.36;
   /* or 136% */
   text-align: center;
   letter-spacing: 0.06em;
@@ -96,11 +116,12 @@
 
 .button {
   background-color: var(--accent-color);
+  border: none;
 }
 .section-hero-button {
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(30 / 16);
+  line-height: 1.88;
   /* identical to box height, or 188% */
   display: flex;
   align-items: center;
@@ -112,17 +133,15 @@
 
 /* Features */
 .section-features-title {
-  font-weight: 700;
   font-size: 14px;
-  line-height: calc(16 / 14);
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color);
 }
 .section-features-text {
-  font-weight: 400;
   font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
@@ -130,9 +149,8 @@
 
 /* Section Work */
 .section-work-title {
-  font-weight: 700;
   font-size: 36px;
-  line-height: calc(42 / 36);
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -143,9 +161,8 @@
   background: var(--secondary-bg-color);
 }
 .section-team-title {
-  font-weight: 700;
   font-size: 36px;
-  line-height: calc(42 / 36);
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -154,7 +171,7 @@
 .section-pre-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: calc(19 / 16);
+  line-height: 1.19;
   /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
@@ -162,13 +179,16 @@
 }
 
 .section-team-text {
-  font-weight: 400;
   font-size: 16px;
-  line-height: calc(19 / 16);
+  line-height: 1.19;
   /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+.team-list-item {
+  background-color: var(--primary-white-color);
 }
 /* footer */
 .footer {
@@ -180,7 +200,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: calc(31 / 26);
+  line-height: 1.19;
   /* identical to box height */
   letter-spacing: 0.03em;
 }
@@ -198,7 +218,7 @@
 .footer-address-text {
   font-weight: 400;
   font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
@@ -207,7 +227,7 @@
 .footer-mail-link {
   font-weight: 400;
   font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
   color: var(--secondary-white-color);
@@ -216,8 +236,60 @@
 .footer-tel-link {
   font-weight: 400;
   font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
   color: var(--secondary-white-color);
+}
+
+/* Portfolio */
+
+.filter-button {
+  background: var(--secondary-bg-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  /* identical to box height, or 162% */
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  font-family: "Roboto";
+  font-style: normal;
+  border: none;
+}
+
+.filter-button.link {
+  color: var(--primary-text-color);
+  background-color: #f5f4fa;
+}
+
+.filter-button.link:hover,
+.filter-button.link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+/* Progects */
+
+.section-progects {
+  background-color: var(--primary-bg-color);
+}
+
+.progects-item-list {
+  background-color: var(--primary-white-color);
+}
+
+.progect-list-title {
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+.progect-list-text {
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 188% */
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
